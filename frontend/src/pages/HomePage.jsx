@@ -16,7 +16,7 @@ const HomePage = () => {
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(true);
 
-  // 🔥 Fetch Tasks With Query Params
+  // Fetch Tasks With Query Params
   const fetchTasks = async () => {
     try {
       const res = await api.get("/tasks", {
@@ -35,7 +35,7 @@ const HomePage = () => {
     }
   };
 
-  // 🔥 Fetch Stats
+  // Fetch Stats
   const fetchStats = async () => {
     try {
       const res = await api.get("/tasks/stats");
@@ -59,7 +59,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-base-200 p-6">
       <div className="max-w-7xl mx-auto">
 
-        {/* 🔍 SEARCH */}
+        {/*  SEARCH */}
         <div className="mb-6">
           <input
             type="text"
@@ -70,7 +70,7 @@ const HomePage = () => {
           />
         </div>
 
-        {/* 🗂 FILTER SECTION */}
+        {/*  FILTER SECTION */}
         <div className="flex gap-4 mb-6 flex-wrap">
 
           {/* Priority Filter */}
@@ -98,7 +98,7 @@ const HomePage = () => {
 
         </div>
 
-        {/* 📊 STATS DASHBOARD */}
+        {/*  STATS DASHBOARD */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="stat bg-base-100 shadow rounded-xl">
             <div className="stat-title">Total Tasks</div>
@@ -122,7 +122,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* 🧾 TASK LIST */}
+        {/*  TASK LIST */}
         {loading ? (
           <div className="text-center py-10">Loading tasks...</div>
         ) : tasks.length === 0 ? (
